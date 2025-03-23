@@ -49,6 +49,10 @@
                 margin-right: 60px;
                 margin-top: 200px;
 
+                @include tabletMore {
+                    padding-top: 100px;
+                }
+
                 @include tablet {
                     flex-direction: row;
                     flex-wrap: wrap;
@@ -218,8 +222,8 @@
                 }
 
                 h2:nth-of-type(1) {
-                    @include desktop {
-                        margin-top: 100px;
+                    @include tabletMore {
+                        padding-top: 100px;
                     }
                 }
 

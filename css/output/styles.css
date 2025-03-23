@@ -2317,6 +2317,11 @@ table {
   margin-right: 60px;
   margin-top: 200px;
 }
+@media (min-width: 1024px) {
+  .product-list-section .content-wrapper .brand-container .brand-list {
+    padding-top: 100px;
+  }
+}
 @media (min-width: 600px) and (max-width: 1023px) {
   .product-list-section .content-wrapper .brand-container .brand-list {
     flex-direction: row;
@@ -2489,9 +2494,9 @@ table {
     font-size: 2.6rem;
   }
 }
-@media (min-width: 1920px) {
+@media (min-width: 1024px) {
   .product-list-section .content-wrapper .grid-wrapper .grid-header h2:nth-of-type(1) {
-    margin-top: 100px;
+    padding-top: 100px;
   }
 }
 .product-list-section .content-wrapper .grid-wrapper .grid-header h2:nth-of-type(2) {
