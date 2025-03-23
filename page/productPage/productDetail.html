@@ -1,170 +1,171 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>POPMART - Product Detail</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="/css/output/styles.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>POPMART - Product Detail</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="/css/output/styles.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    </head>
 
-  <body id="productDetail-body">
-    <div id="header"></div>
-    <!-- 제품 상세 페이지 -->
-    <main>
-      <div class="product-inner">
-        <section class="product-slider-section">
-          <div class="swiper product-slider">
-            <div class="swiper-wrapper">
-              <!-- 상품 이미지 슬라이더 (동적으로 생성) -->
-            </div>
+    <body id="productDetail-body">
+        <div id="header"></div>
+        <!-- 제품 상세 페이지 -->
+        <main>
+            <div class="product-inner">
+                <section class="product-slider-section">
+                    <div class="swiper product-slider">
+                        <div class="swiper-wrapper">
+                            <!-- 상품 이미지 슬라이더 (동적으로 생성) -->
+                        </div>
 
-            <!-- 네비게이션 버튼 -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-            <!-- 페이지네이션 -->
-            <div class="swiper-pagination"></div>
-          </div>
+                        <!-- 네비게이션 버튼 -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                        <!-- 페이지네이션 -->
+                        <div class="swiper-pagination"></div>
+                    </div>
 
-          <div class="product-info">
-            <h2 class="product-title"></h2>
-            <!-- 상품 제목 (동적으로 생성) -->
-            <p class="price product-price"></p>
-            <!-- 상품 가격 (동적으로 생성) -->
-            <div class="product-details">
-              <div class="quantity-control">
-                <p>수량</p>
-                <button class="minus">-</button>
-                <span>1</span>
-                <button class="plus">+</button>
-              </div>
-              <div class="shipping-info">
-                <span>배송혜택</span>
-                <div class="shipping-progress-container">
-                  <p class="shipping">15,000원 더 담으면 <span>무료배송!</span></p>
-                  <div class="progress-bar">
-                    <div class="progress"></div>
-                  </div>
-                  <p class="free-shipping-condition">3만원 이상 무료 배송됩니다!</p>
+                    <div class="product-info">
+                        <h2 class="product-title"></h2>
+                        <!-- 상품 제목 (동적으로 생성) -->
+                        <p class="price product-price"></p>
+                        <!-- 상품 가격 (동적으로 생성) -->
+                        <div class="product-details">
+                            <div class="quantity-control">
+                                <p>수량</p>
+                                <button class="minus">-</button>
+                                <span>1</span>
+                                <button class="plus">+</button>
+                            </div>
+                            <div class="shipping-info">
+                                <span>배송혜택</span>
+                                <div class="shipping-progress-container">
+                                    <p class="shipping">15,000원 더 담으면 <span>무료배송!</span></p>
+                                    <div class="progress-bar">
+                                        <div class="progress"></div>
+                                    </div>
+                                    <p class="free-shipping-condition">3만원 이상 무료 배송됩니다!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <button class="cart">장바구니</button>
+                            <button class="buy">구매하기</button>
+                        </div>
+                    </div>
+
+                    <!-- 카드 형태 UI (초기에는 숨김) -->
+                    <div class="product-card" style="display: none">
+                        <h2 class="product-title"></h2>
+                        <!-- 상품 제목 (동적으로 생성) -->
+                        <p class="price product-price"></p>
+                        <!-- 상품 가격 (동적으로 생성) -->
+                        <div class="product-details">
+                            <div class="quantity-control">
+                                <p>수량</p>
+                                <button class="minus">-</button>
+                                <span>1</span>
+                                <button class="plus">+</button>
+                            </div>
+                            <div class="shipping-info">
+                                <span>배송혜택</span>
+                                <div class="shipping-progress-container">
+                                    <p class="shipping">15,000원 더 담으면 <span>무료배송!</span></p>
+                                    <div class="progress-bar">
+                                        <div class="progress"></div>
+                                    </div>
+                                    <p class="free-shipping-condition">3만원 이상 무료 배송됩니다!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <button class="cart">장바구니</button>
+                            <button class="buy">구매하기</button>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="down-btn-wrapper">
+                    <img
+                        src="https://github.com/hyeonky/dp-static/blob/main/popmart/btnIcon/chevrons-down.png?raw=true"
+                        alt="down-btn"
+                        class="down-btn"
+                    />
                 </div>
-              </div>
+
+                <!-- DETAIL -->
+                <section class="product-detail-section">
+                    <h2>DETAIL</h2>
+
+                    <div class="detail-img">
+                        <!-- 상세 이미지 (동적으로 생성) -->
+                    </div>
+                </section>
+
+                <!-- INFORMATION -->
+                <section class="product-info-section">
+                    <h2>INFORMATION</h2>
+                    <table>
+                        <!-- 상품 정보 테이블 (동적으로 생성) -->
+                    </table>
+                </section>
+
+                <!-- 관련 상품 -->
+                <section class="related-products-section">
+                    <h2>관련 상품</h2>
+                    <div class="swiper related-products">
+                        <div class="swiper-wrapper">
+                            <!-- 관련 상품 목록 (동적으로 생성) -->
+                        </div>
+                        <!-- 좌우 네비게이션 -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </section>
             </div>
-            <div class="buttons">
-              <button class="cart">장바구니</button>
-              <button class="buy">구매하기</button>
-            </div>
-          </div>
+        </main>
+        <div class="product-btn">
+            <!-- Top 버튼 -->
+            <button class="top-btn">
+                <img
+                    src="https://github.com/hyeonky/dp-static/blob/main/popmart/btnIcon/topBtnIcon.png?raw=true"
+                    alt="Top 버튼"
+                />
+            </button>
 
-          <!-- 카드 형태 UI (초기에는 숨김) -->
-          <div class="product-card" style="display: none">
-            <h2 class="product-title"></h2>
-            <!-- 상품 제목 (동적으로 생성) -->
-            <p class="price product-price"></p>
-            <!-- 상품 가격 (동적으로 생성) -->
-            <div class="product-details">
-              <div class="quantity-control">
-                <p>수량</p>
-                <button class="minus">-</button>
-                <span>1</span>
-                <button class="plus">+</button>
-              </div>
-              <div class="shipping-info">
-                <span>배송혜택</span>
-                <div class="shipping-progress-container">
-                  <p class="shipping">15,000원 더 담으면 <span>무료배송!</span></p>
-                  <div class="progress-bar">
-                    <div class="progress"></div>
-                  </div>
-                  <p class="free-shipping-condition">3만원 이상 무료 배송됩니다!</p>
-                </div>
-              </div>
-            </div>
-            <div class="buttons">
-              <button class="cart">장바구니</button>
-              <button class="buy">구매하기</button>
-            </div>
-          </div>
-        </section>
-
-        <div class="down-btn-wrapper">
-          <img
-            src="https://github.com/hyeonky/dp-static/blob/main/popmart/btnIcon/chevrons-down.png?raw=true"
-            alt="down-btn"
-          />
-        </div>
-
-        <!-- DETAIL -->
-        <section class="product-detail-section">
-          <h2>DETAIL</h2>
-
-          <div class="detail-img">
-            <!-- 상세 이미지 (동적으로 생성) -->
-          </div>
-        </section>
-
-        <!-- INFORMATION -->
-        <section class="product-info-section">
-          <h2>INFORMATION</h2>
-          <table>
-            <!-- 상품 정보 테이블 (동적으로 생성) -->
-          </table>
-        </section>
-
-        <!-- 관련 상품 -->
-        <section class="related-products-section">
-          <h2>관련 상품</h2>
-          <div class="swiper related-products">
-            <div class="swiper-wrapper">
-              <!-- 관련 상품 목록 (동적으로 생성) -->
-            </div>
-            <!-- 좌우 네비게이션 -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-          </div>
-        </section>
-      </div>
-    </main>
-    <div class="product-btn">
-      <!-- Top 버튼 -->
-      <button class="top-btn">
-        <img
-          src="https://github.com/hyeonky/dp-static/blob/main/popmart/btnIcon/topBtnIcon.png?raw=true"
-          alt="Top 버튼"
-        />
-      </button>
-
-      <!-- 장바구니 버튼 -->
-      <!-- <button class="cart-btn">
+            <!-- 장바구니 버튼 -->
+            <!-- <button class="cart-btn">
         <img
           src="https://github.com/hyeonky/dp-static/blob/main/popmart/btnIcon/cartBtnIcon.png?raw=true"
           alt="장바구니 버튼"
         />
       </button> -->
 
-      <!-- 토글 버튼 -->
-      <button class="toggle-btn">
-        <img
-          src="https://github.com/hyeonky/dp-static/blob/main/popmart/btnIcon/toggleBtn.png?raw=true"
-          alt="토글 버튼"
-        />
-      </button>
-    </div>
-    <div id="footer"></div>
-    <script>
-      fetch('/common/cartButton.html')
-        .then((response) => response.text())
-        .then((data) => {
-          document.body.insertAdjacentHTML('beforeend', data);
-        })
-        .catch((error) => console.error('Error loading cartButton.html:', error));
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
-    <script type="module" src="/js/productPage/productDetailSwiper.js"></script>
-    <script type="module" src="/js/productPage/productDetailScript.js"></script>
-    <script src="/js/scriptLoader.js"></script>
-    <script src="/js/common/cursor.js"></script>
-  </body>
+            <!-- 토글 버튼 -->
+            <button class="toggle-btn">
+                <img
+                    src="https://github.com/hyeonky/dp-static/blob/main/popmart/btnIcon/toggleBtn.png?raw=true"
+                    alt="토글 버튼"
+                />
+            </button>
+        </div>
+        <div id="footer"></div>
+        <script>
+            fetch('/common/cartButton.html')
+                .then((response) => response.text())
+                .then((data) => {
+                    document.body.insertAdjacentHTML('beforeend', data);
+                })
+                .catch((error) => console.error('Error loading cartButton.html:', error));
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+        <script type="module" src="/js/productPage/productDetailSwiper.js"></script>
+        <script type="module" src="/js/productPage/productDetailScript.js"></script>
+        <script src="/js/scriptLoader.js"></script>
+        <script src="/js/common/cursor.js"></script>
+    </body>
 </html>
